@@ -577,7 +577,7 @@ export default function Portfolio() {
   /* -------------------------- ASIDE ----------------------------- */
   return (
      <div className="min-h-screen flex flex-col md:flex-row bg-blue-50 text-slate-800">
-      <aside className="flex-col w-full md:w-64 h-auto md:h-screen sticky top-0 p-4 m-0 md:m-4 bg-white rounded-none md:rounded-3xl shadow-inner">
+      <aside className=" overflow-auto flex-col w-full md:w-64 h-auto md:h-screen sticky top-0 p-4 m-0 md:m-4 bg-white rounded-none md:rounded-3xl shadow-inner">
         <nav className="flex flex-row md:flex-col gap-2 md:gap-2 mt-4 md:mt-6 justify-around md:justify-start">
           {nav.map(({ id, label, icon: Icon }) => (
             <motion.button

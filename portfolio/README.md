@@ -16,7 +16,7 @@
 1. Клонируй репозиторий:
 
 ```bash
-git clone https://github.com/your-username/your-portfolio.git
+git clone https://github.com/sakura/portfolio.git
 cd your-portfolio
 ```
 

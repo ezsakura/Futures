@@ -574,7 +574,7 @@ export default function Portfolio() {
       <p className="mt-2 text-sm text-slate-500">{note}</p>
     </motion.div>
   );
-
+ <test></test>
   /* -------------------------- ASIDE ----------------------------- */
   return (
      <div className="min-h-screen flex flex-col md:flex-row bg-blue-50 text-slate-800">

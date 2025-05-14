@@ -1,12 +1,86 @@
-# React + Vite
+# 💼 Личный Портфолио Сайт
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Добро пожаловать в мой персональный сайт-портфолио!  
+Этот проект реализован с использованием современных инструментов фронтенд-разработки, демонстрируя мои навыки, проекты и обеспечивая простой способ связи.
 
-Currently, two official plugins are available:
+## ⚙️ Стек технологий
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚡ **Vite + React** — молниеносная сборка и современный подход к SPA
+- 📩 **EmailJS** — отправка email-сообщений прямо с сайта
+- 🌀 **framer-motion** — плавные анимации и интерактивность
+- 💡 **lucide-react** — стильные и гибкие SVG-иконки
+- 📊 **recharts** — наглядные графики и визуализация данных
 
-## Expanding the ESLint configuration
+## 🚀 Быстрый старт
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Клонируй репозиторий:
+
+```bash
+git clone https://github.com/your-username/your-portfolio.git
+cd your-portfolio
+```
+
+2. Установи зависимости:
+
+```bash
+npm install
+```
+
+3. Запусти локальный сервер:
+
+```bash
+npm run dev
+```
+
+4. Открой в браузере:
+
+```
+http://localhost:5173
+```
+
+## 📁 Структура проекта
+
+```bash
+src/
+├── assets/            # Изображения и медиа
+├── components/        # Переиспользуемые компоненты
+├── sections/          # Основные секции страницы
+├── utils/             # Вспомогательные функции
+├── App.jsx            # Главный компонент
+├── main.jsx           # Точка входа
+```
+
+## 📬 EmailJS настройка
+
+1. Зарегистрируйся на [EmailJS](https://www.emailjs.com/)
+2. Создай email-сервис и шаблон
+3. Добавь следующие переменные в `.env`:
+
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_USER_ID=your_user_id
+```
+
+> ⚠️ Не забудь добавить `.env` в `.gitignore`!
+
+## ✨ Особенности
+
+- 📱 Полностью адаптивный дизайн
+- ✉️ Обратная связь с отправкой сообщений на email
+- 📈 Статистика и диаграммы с Recharts
+- 💫 Анимированные переходы и эффекты
+
+## 📞 Контакты
+
+Если вы хотите связаться со мной, пишите на:
+
+**📧 knikiforov017@gmail.com**
+
+## 📄 Лицензия
+
+Проект распространяется под лицензией [MIT](LICENSE).
+
+---
+
+Сделано с ❤️ и React.

@@ -44,7 +44,7 @@ export default function ContactForm() {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
               {/* Имя */}
               <div className="grid gap-1">
-                <label htmlFor="firstName" className="text-sm font-medium">
+                <label htmlFor="firstName" className="text-sm font-medium" required>
                   Имя
                 </label>
                 <input
@@ -59,7 +59,7 @@ export default function ContactForm() {
 
               {/* Фамилия */}
               <div className="grid gap-1">
-                <label htmlFor="lastName" className="text-sm font-medium">
+                <label htmlFor="lastName" className="text-sm font-medium" required>
                   Фамилия
                 </label>
                 <input
@@ -69,13 +69,14 @@ export default function ContactForm() {
                   type="text"
                   placeholder="Иванов"
                   className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+                  
                 />
               </div>
             </div>
 
             {/* Email — на всю ширину */}
             <div className="grid gap-1">
-              <label htmlFor="email" className="text-sm font-medium">
+              <label htmlFor="email" className="text-sm font-medium" required>
                 Ваш email
               </label>
               <input
@@ -90,7 +91,7 @@ export default function ContactForm() {
 
             {/* Сообщение */}
             <div className="grid gap-1">
-              <label htmlFor="message" className="text-sm font-medium">
+              <label htmlFor="message" className="text-sm font-medium" required>
                 Сообщение
               </label>
               <textarea

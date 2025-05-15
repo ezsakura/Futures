@@ -8,9 +8,9 @@ const bgMap = {
 export default function StatCard({ title, number, note, color }) {
   return (
     <motion.div whileHover={{ y: -5 }} className={`${bgMap[color]} p-6 rounded-2xl shadow-inner`}>
-      <h3 className="text-xl font-semibold text-slate-800 mb-2">{title}</h3>
-      <p className={`text-3xl font-bold text-${color}-600`}>{number}</p>
-      <p className="mt-2 text-sm text-slate-500">{note}</p>
+      <h3 className="text-lg md:text-xl lg:text-lg font-semibold text-slate-800 mb-2">{title}</h3>
+      <p className={`text-2xl md:text-3xl lg:text-4xl font-bold text-${color}-600`}>{number}</p>
+      <p className="mt-2 text-xs md:text-sm lg:text-base text-slate-500">{note}</p>
     </motion.div>
   );
 }

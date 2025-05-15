@@ -3,21 +3,8 @@ import { motion } from 'framer-motion';
 import StatCard from '../components/StatCard';
 import CTA from '../components/CTA';
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from 'recharts';
+import { chartData, COLORS, Info } from '../utils/utils';
 
-const chartData = [
-  { name: 'Front-End', value: 55 },
-  { name: 'Back-End', value: 10 },
-  { name: 'Кофе ☕️', value: 35 }
-];
-const COLORS = ['#A3CEF1', '#C1E1C1', '#FFE5B4'];
-
-const Text = [ {
-  name: 'sakura' 
-},
-{
-  desc :'Front-End разработчик, любитель чистого кода, по совместительству профессиональный дегустатор латте. Создаю быстро работающие интерфейсы и превращаю сухие таблицы в сочные графики.'
-}
- ];
 
 export default function Home({ onContact }) {
   return (
@@ -39,14 +26,14 @@ export default function Home({ onContact }) {
                   break-words    /* даёт возможность переноса слов при нехватке места */
                 "
               >
-                Привет! Я {Text.map((item, index) => (
+                Привет! Я {Info.map((item, index) => (
                  <span key={index}> {item.name} </span> 
                 ))}
                 <span className="inline-block origin-[70%_70%] animate-wiggle">👋</span>
               </motion.h1>
 
               <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-600">
-                {Text.map((item, index) => (
+                {Info.map((item, index) => (
                  <span key={index}> {item.desc} </span> 
                 ))}
               </p>
@@ -55,7 +42,7 @@ export default function Home({ onContact }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <StatCard title="Опыт" number="1+ год" note="в веб-разработке" color="blue" />
           <StatCard title="Проекты" number="3" note="от лендингов до дашбордов" color="emerald" />
-          <StatCard title="Чашек кофе" number="~1000" note="и ни одной пролито ☕️" color="amber" />
+          <StatCard title="Чашек кофе" number="~100" note="и ни одной не пролито ☕️" color="amber" />
         </div>
         <div className="w-full h-72 lg:h-80">
           <ResponsiveContainer>

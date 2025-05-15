@@ -3,60 +3,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import CTA from '../components/CTA';
 import Testimonials from '../components/Testimonials';
+import { categories, projects, testimonials } from '../utils/utils';
 
-  const categories = [
-    { id: "all", label: "Все" },
-    { id: "dashboard", label: "Дашборды" },
-    { id: "landing", label: "Сайт-лендинги" },
-    { id: "saas", label: "SaaS" },
-    { id: "mobile", label: "Мобильные" }
-  ];
-  const projects = [
-    {
-      id: 1,
-      title: "FinDash – финанс. дашборд",
-      img: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=60",
-      category: "dashboard",
-      tech: "React, Recharts, Zustand",
-      desc: "Интерактивная визуализация финансовых KPI для SMB-клиентов.",
-      demo: "https://findash.example.com",
-      repo: "https://github.com/abobus/findash"
-    },
-    {
-      id: 2,
-      title: "Barista-Landing",
-      img: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=60",
-      category: "landing",
-      tech: "Next.js, Tailwind, Framer Motion",
-      desc: "Сайт-визитка для кофейни с плавной анимацией и магазином мерча.",
-      demo: "https://barista.example.com",
-      repo: "https://github.com/abobus/barista-landing"
-    },
-    {
-      id: 3,
-      title: "TaxWise AI Bot",
-      img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=60",
-      category: "saas",
-      tech: "React, OpenAI, Supabase",
-      desc: "Помощник ответит на вопросы о налогах в реальном времени.",
-      demo: "https://taxwise.example.com",
-      repo: "https://github.com/abobus/taxwise-bot"
-    },
-    {
-      id: 4,
-      title: "EcoMobile – трекер отходов",
-      img: "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=60",
-      category: "mobile",
-      tech: "React Native, Expo",
-      desc: "Геймификация сортировки мусора с ежедневными челленджами.",
-      demo: "https://expo.dev/@abobus/ecomobile",
-      repo: "https://github.com/abobus/ecomobile"
-    }
-  ];
-  const testimonials = [
-  { name: 'Иван Иванов', text: 'Отличная работа, всё было сделано вовремя!' },
-  { name: 'Мария Петрова', text: 'Профессионализм и креативность на высоте.' }
-];  
+
+
 export default function Projects({ onContact }) {
   const [filter, setFilter] = useState('all');
   const filtered = filter==='all'?projects:projects.filter(p=>p.category===filter);

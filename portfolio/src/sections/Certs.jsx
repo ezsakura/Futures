@@ -1,22 +1,10 @@
 /* ---------------- sections/Certs.jsx ---------------- */
 import React from 'react';
 import { motion } from 'framer-motion';
+import { certificates } from '../utils/utils';
 
 
-  const certificates = [
-    {
-      title: "Certified Front-End Developer",
-      issuer: "FreeCodeCamp",
-      year: "2024",
-      link: "https://freecodecamp.org/certification/abobus/frontend"
-    },
-    {
-      title: "React Professional",
-      issuer: "Meta",
-      year: "2023",
-      link: "https://learningportal.meta.com/abobus/react"
-    }
-  ];
+
 
 export default function Certs() {
   return (

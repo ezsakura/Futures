@@ -29,112 +29,91 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-4xl w-full mx-auto space-y-6 md:space-y-0 md:flex md:items-start">
-      {/* Левая часть — Форма */}
-      <div className="w-full md:w-2/3 bg-white shadow-lg rounded-2xl p-8 md:mr-6">
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className="space-y-6"
-        >
-          <h1 className="text-2xl font-semibold">Оставьте заявку на обратную связь</h1>
-
-          {/* Контейнер для Имя + Фамилия */}
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {/* Имя */}
-            <div className="grid gap-1">
-              <label htmlFor="firstName" className="text-sm font-medium">
-                Имя
-              </label>
-              <input
-                id="firstName"
-                name="firstName"
-                required
-                type="text"
-                placeholder="Иван"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
-              />
-            </div>
-
-            {/* Фамилия */}
-            <div className="grid gap-1">
-              <label htmlFor="lastName" className="text-sm font-medium">
-                Фамилия
-              </label>
-              <input
-                id="lastName"
-                name="lastName"
-                required
-                type="text"
-                placeholder="Иванов"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
-              />
-            </div>
-          </div>
-
-          {/* Email — на всю ширину даже на больших экранах */}
-          <div className="grid gap-1">
-            <label htmlFor="email" className="text-sm font-medium">
-              Ваш email
-            </label>
-            <input
-              id="email"
-              name="email"
-              required
-              type="email"
-              placeholder="you@example.com"
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
-            />
-          </div>
-
-          {/* Сообщение */}
-          <div className="grid gap-1">
-            <label htmlFor="message" className="text-sm font-medium">
-              Сообщение
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows={5}
-              placeholder="Ваше сообщение…"
-              className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
-            />
-          </div>
-
-          {/* Кнопка */}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full flex items-center justify-center gap-2 py-3 bg-blue-600 text-white rounded-xl"
+    <>
+      {/* Новый заголовок для всей секции */}
+        {/* Левая часть — Форма */}
+        <div className="w-full md:w-2/3 bg-white shadow-lg rounded-2xl p-8 md:mr-6">
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="space-y-6"
           >
-            {loading ? <Loader className="animate-spin" /> : <Mail />}
-            {loading ? 'Отправляем...' : submitted ? 'Отправлено!' : 'Отправить'}
-          </button>
-        </form>
-      </div>
+            {/* Заголовок формы убран */}
 
-      {/* Правая часть — Информация */}
-      <div className="w-full md:w-1/3 bg-white shadow-lg rounded-2xl p-8 mt-6 md:mt-0">
-        <h2 className="text-xl font-semibold">Контактная информация</h2>
-        <p className="text-gray-600">
-          Если у вас есть вопросы, вы можете связаться с нами напрямую:
-        </p>
-        <ul className="space-y-2">
-          <li>
-            <strong>Email:</strong> support@example.com
-          </li>
-          <li>
-            <strong>Телефон:</strong> +7 (123) 456-78-90
-          </li>
-          <li>
-            <strong>Адрес:</strong> Москва, ул. Примерная, д. 1
-          </li>
-        </ul>
-        <p className="text-gray-600">
-          Мы ответим вам в течение 24 часов.
-        </p>
-      </div>
-    </div>
+            {/* Контейнер для Имя + Фамилия */}
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              {/* Имя */}
+              <div className="grid gap-1">
+                <label htmlFor="firstName" className="text-sm font-medium">
+                  Имя
+                </label>
+                <input
+                  id="firstName"
+                  name="firstName"
+                  required
+                  type="text"
+                  placeholder="Иван"
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+                />
+              </div>
+
+              {/* Фамилия */}
+              <div className="grid gap-1">
+                <label htmlFor="lastName" className="text-sm font-medium">
+                  Фамилия
+                </label>
+                <input
+                  id="lastName"
+                  name="lastName"
+                  required
+                  type="text"
+                  placeholder="Иванов"
+                  className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+                />
+              </div>
+            </div>
+
+            {/* Email — на всю ширину */}
+            <div className="grid gap-1">
+              <label htmlFor="email" className="text-sm font-medium">
+                Ваш email
+              </label>
+              <input
+                id="email"
+                name="email"
+                required
+                type="email"
+                placeholder="you@example.com"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+              />
+            </div>
+
+            {/* Сообщение */}
+            <div className="grid gap-1">
+              <label htmlFor="message" className="text-sm font-medium">
+                Сообщение
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows={5}
+                placeholder="Ваше сообщение…"
+                className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+              />
+            </div>
+
+            {/* Кнопка */}
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full flex items-center justify-center gap-2 py-3 bg-blue-600 text-white rounded-xl"
+            >
+              {loading ? <Loader className="animate-spin" /> : <Mail />}
+              {loading ? 'Отправляем...' : submitted ? 'Отправлено!' : 'Отправить'}
+            </button>
+          </form>
+        </div>
+    </>
   );
 }

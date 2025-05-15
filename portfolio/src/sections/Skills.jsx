@@ -1,15 +1,8 @@
 /* ---------------- sections/Skills.jsx ---------------- */
 import React from 'react';
 import { motion } from 'framer-motion';
+import { skills } from '../utils/utils';
 
-  const skills = [
-    { name: "HTML5 & CSS3", level: 90, years: 3, desc: "Pixel-perfect layouts, responsive design, BEM/SMACSS" },
-    { name: "JavaScript (ES6+)", level: 85, years: 3, desc: "Modern JS, DOM manipulation, fetch API" },
-    { name: "React & Hooks", level: 82, years: 2, desc: "Custom hooks, context, performance optimizations" },
-    { name: "TypeScript", level: 70, years: 1.5, desc: "Типизация, generics, интеграция в React" },
-    { name: "Recharts & D3.js", level: 65, years: 1, desc: "Интерактивные диаграммы и графики" },
-    { name: "Tailwind CSS", level: 80, years: 2, desc: "Utility-first подход и кастомные конфиги" }
-  ];
 
 export default function Skills() {
   return (

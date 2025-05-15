@@ -17,7 +17,7 @@
 
 ```bash
 git clone https://github.com/sakura/portfolio.git
-cd your-portfolio
+cd portfolio
 ```
 
 2. Установи зависимости:

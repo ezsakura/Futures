@@ -26,8 +26,6 @@ import { motion } from 'framer-motion';
     }
     
   ];
-
-
                   export default function Education() {
                     return (
                       <div className="space-y-8">

@@ -7,10 +7,18 @@ import { PieChart, Pie, Cell, Legend, ResponsiveContainer } from 'recharts';
 
 const chartData = [
   { name: 'Front-End', value: 55 },
-  { name: 'Экономика', value: 25 },
-  { name: 'Кофе ☕️', value: 20 }
+  { name: 'Back-End', value: 10 },
+  { name: 'Кофе ☕️', value: 35 }
 ];
 const COLORS = ['#A3CEF1', '#C1E1C1', '#FFE5B4'];
+
+const Text = [ {
+  name: 'sakura' 
+},
+{
+  desc :'Front-End разработчик, любитель чистого кода, по совместительству профессиональный дегустатор латте. Создаю быстро работающие интерфейсы и превращаю сухие таблицы в сочные графики.'
+}
+ ];
 
 export default function Home({ onContact }) {
   return (
@@ -20,20 +28,34 @@ export default function Home({ onContact }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl font-extrabold leading-tight text-slate-800"
+                className="
+                  text-3xl    /* по умолчанию на самых маленьких экранах */
+                  sm:text-4xl /* от sm (640px) и выше */
+                  md:text-5xl /* от md (768px) и выше */
+                  lg:text-6xl /* от lg (1024px) и выше */
+                  xl:text-7xl /* от xl (1280px) и выше */
+                  font-extrabold
+                  leading-tight
+                  text-slate-800
+                  break-words    /* даёт возможность переноса слов при нехватке места */
+                "
               >
-                Привет! Я Константин Никифоров <span className="inline-block origin-[70%_70%] animate-wiggle">👋</span>
+                Привет! Я {Text.map((item, index) => (
+                 <span key={index}> {item.name} </span> 
+                ))}
+                <span className="inline-block origin-[70%_70%] animate-wiggle">👋</span>
               </motion.h1>
+
               <p className="mt-6 max-w-3xl mx-auto text-lg text-slate-600">
-                Front-End разработчик, любитель чистого кода, по совместительству
-                профессиональный дегустатор латте. Создаю быстро работающие интерфейсы и превращаю сухие
-                таблицы в сочные графики.
+                {Text.map((item, index) => (
+                 <span key={index}> {item.desc} </span> 
+                ))}
               </p>
             </section>
       <section className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <StatCard title="Опыт" number="3+ года" note="в веб-разработке" color="blue" />
-          <StatCard title="Проекты" number="15+" note="от лендингов до SaaS" color="emerald" />
+          <StatCard title="Опыт" number="1+ год" note="в веб-разработке" color="blue" />
+          <StatCard title="Проекты" number="3" note="от лендингов до дашбордов" color="emerald" />
           <StatCard title="Чашек кофе" number="~1000" note="и ни одной пролито ☕️" color="amber" />
         </div>
         <div className="w-full h-72 lg:h-80">

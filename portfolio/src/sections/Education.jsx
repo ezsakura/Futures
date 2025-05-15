@@ -9,21 +9,49 @@ import { motion } from 'framer-motion';
       period: "2021–2025",
       details: "Исследовал налоговые стратегии. Автор 2 статей в студенческом журнале.",
       courses: ["Налоговое право", "Финансовый анализ", "Корпоративные финансы"]
+    },
+        {
+      institution: "Университет Экономики",
+      degree: "Бакалавр, Налоги и налогообложение",
+      period: "2021–2025",
+      details: "Исследовал налоговые стратегии. Автор 2 статей в студенческом журнале.",
+      courses: ["Налоговое право", "Финансовый анализ", "Корпоративные финансы"]
+    },
+        {
+      institution: "Университет Экономики",
+      degree: "Бакалавр, Налоги и налогообложение",
+      period: "2021–2025",
+      details: "Исследовал налоговые стратегии. Автор 2 статей в студенческом журнале.",
+      courses: ["Налоговое право", "Финансовый анализ", "Корпоративные финансы"]
     }
+    
   ];
 
-export default function Education() {
-  return (
-    <div className="space-y-8">
-      <h2 className="text-3xl font-bold">Образование</h2>
-      {education.map((e,i)=>(
-        <motion.div key={i} className="bg-white p-6 rounded-2xl shadow">
-          <h3 className="text-xl font-semibold text-slate-800">{e.degree}, {e.institution}</h3>
-          <span className="text-sm text-slate-500">{e.period}</span>
-          <p className="mt-2 text-slate-600">{e.details}</p>
-          <ul className="list-disc list-inside text-slate-600 mt-2">{e.courses.map((c,j)=><li key={j}>{c}</li>)}</ul>
-        </motion.div>
-      ))}
-    </div>
+
+                  export default function Education() {
+                    return (
+                      <div className="space-y-8">
+                  <section>
+                    <h3 className="text-2xl font-semibold text-slate-800 mb-8">Образование</h3>
+                    <div className="relative ml-4 border-l-2 border-slate-200 pl-6 space-y-10">
+                      {education.map((e, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: i * 0.1 }}
+                          className="relative"
+                        >
+                          <span className="absolute -left-[17px] top-1.5 w-3.5 h-3.5 rounded-full bg-blue-600"></span>
+                          <h4 className="text-lg font-medium text-slate-800">{e.period} — {e.institution}</h4>
+                          <p className="text-slate-600 text-sm mt-1 max-w-xl">{e.degree}</p>
+                          <ul className="list-disc list-inside text-slate-600 mt-2">{e.courses.map((c,j)=><li key={j}>{c}</li>)}</ul>
+                          <p className="text-slate-600 text-sm mt-1 max-w-xl">{e.details}</p>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </section>
+            </div>
   );
 }

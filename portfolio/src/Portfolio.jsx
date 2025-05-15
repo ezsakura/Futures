@@ -8,7 +8,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Education from "./sections/Education";
 import Certs from "./sections/Certs";
-import ContactForm from "./components/ContactForm";
+import Contact from "./sections/Contact";
 
 const pages = {
   home: Home,
@@ -17,7 +17,7 @@ const pages = {
   projects: Projects,
   education: Education,
   certs: Certs,
-  contact: ContactForm,
+  contact: Contact,
 };
 
 export default function Portfolio() {

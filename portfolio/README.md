@@ -85,6 +85,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 Made with ❤️ and React.
 
+---
 
 # 💼 Личный Портфолио Сайт
 

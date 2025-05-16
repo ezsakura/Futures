@@ -1,4 +1,4 @@
-// info.js
+
 export const Info = [
   { email: 'knikiforov017@gmail.com' },
   { number: '8800553535' },

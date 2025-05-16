@@ -19,11 +19,11 @@ const InfoBLock = () => {
       </li>
 
       {/* Телефон и адрес по аналогии */}
-      <li className="flex flex-col sm:flex-row sm:items-center">
+      <li className="flex flex-col sm:flex-row sm:items-center overflow-y-auto">
         <strong className="mr-2">Телефон:</strong>
         <span className="block">{number}</span>
       </li>
-      <li className="flex flex-col sm:flex-row sm:items-center">
+      <li className="flex flex-col sm:flex-row sm:items-center overflow-y-auto">
         <strong className="mr-2">Адрес:</strong>
         <span className="block">{adres}</span>
       </li>

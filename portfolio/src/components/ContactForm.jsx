@@ -9,8 +9,8 @@ export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = e => {
-    e.preventDefault();
     setLoading(true);
+    e.preventDefault();
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -25,7 +25,9 @@ export default function ContactForm() {
       .catch(err => {
         alert(`Ошибка отправки: ${err.text || 'проверьте интернет'}`);
       })
-      .finally(() => setLoading(false));
+      .finally(() => 
+        setLoading(false),
+        alert('Ваше сообщение успешно отправлено!'));
   };
 
   return (

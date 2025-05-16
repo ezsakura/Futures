@@ -39,7 +39,7 @@ export default function Home({ onContact }) {
               </p>
             </section>
       <section className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
           <StatCard title="Опыт" number="1+ год" note="в веб-разработке" color="blue" />
           <StatCard title="Проекты" number="3" note="от лендингов до дашбордов" color="emerald" />
           <StatCard title="Чашек кофе" number="~100" note="и ни одной не пролито ☕️" color="amber" />

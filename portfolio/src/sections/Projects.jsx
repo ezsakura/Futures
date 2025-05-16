@@ -13,7 +13,7 @@ export default function Projects({ onContact }) {
   return (
     <>
       <h2 className="text-3xl font-bold text-slate-800 mb-6">Проекты</h2>
-      <div className="flex gap-3 mb-6">{categories.map(c=><button key={c.id} onClick={()=>setFilter(c.id)} className={`px-4 py-1 rounded-full ${filter===c.id?'bg-blue-600 text-white':'bg-white border'}`}>{c.label}</button>)}</div>
+      <div className="overflow-auto no-scrollbar flex gap-3 mb-6">{categories.map(c=><button key={c.id} onClick={()=>setFilter(c.id)} className={`px-4 py-1 rounded-full ${filter===c.id?'bg-blue-600 text-white':'bg-white border'}`}>{c.label}</button>)}</div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">{filtered.map(p=>(
         <motion.div key={p.id} whileHover={{y:-6}} className="bg-white rounded-2xl shadow-lg flex flex-col overflow-hidden">
           <img src={p.img} alt={p.title} className="h-48 w-full object-cover"/>

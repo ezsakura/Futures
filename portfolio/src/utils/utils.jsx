@@ -7,12 +7,11 @@ export const Info = [
 {  desc :'Front-End разработчик, любитель чистого кода, по совместительству профессиональный дегустатор латте. Создаю быстро работающие интерфейсы и превращаю сухие таблицы в сочные графики.'}
 ];
 export const skills = [
-   { name: "HTML5 & CSS3", level: 90, years: 3, desc: "Pixel-perfect layouts, responsive design, BEM/SMACSS" },
-    { name: "JavaScript (ES6+)", level: 85, years: 3, desc: "Modern JS, DOM manipulation, fetch API" },
-    { name: "React & Hooks", level: 82, years: 2, desc: "Custom hooks, context, performance optimizations" },
-    { name: "TypeScript", level: 70, years: 1.5, desc: "Типизация, generics, интеграция в React" },
-    { name: "Recharts & D3.js", level: 65, years: 1, desc: "Интерактивные диаграммы и графики" },
-    { name: "Tailwind CSS", level: 80, years: 2, desc: "Utility-first подход и кастомные конфиги" }
+   { name: "HTML5 & CSS3", level: 80, years: 3, desc: "Pixel-perfect layouts, responsive design, BEM" },
+    { name: "JavaScript (ES6+)", level: 60, years: 1, desc: "Modern JS, DOM manipulation, fetch API" },
+    { name: "React & Hooks", level: 54, years: 1.5, desc: "Custom hooks, context, performance optimizations" },
+    { name: "Recharts & D3.js", level: 35, years: 1, desc: "Интерактивные диаграммы и графики" },
+    { name: "Tailwind CSS", level: 70, years: 2, desc: "Utility-first подход и кастомные конфиги" }
 ];
 export const timeline = [
       {

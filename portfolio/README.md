@@ -16,7 +16,7 @@ This project is built using modern frontend development tools, showcasing my ski
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sakura/portfolio.git
+   git clone https://github.com/sakura/Futures.git
    cd portfolio
    ```
 2. Install dependencies:

@@ -52,7 +52,7 @@ export const timeline = [
 
  export const education = [
     {
-      institution: "Университет Экономики",
+      institution: "МЦК-ЧЭМК",
       degree: "Бакалавр, Налоги и налогообложение",
       period: "2021–2025",
       details: "Исследовал налоговые стратегии. Автор 2 статей в студенческом журнале.",
